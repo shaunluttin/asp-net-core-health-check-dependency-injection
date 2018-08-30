@@ -36,7 +36,7 @@ public class Startup
     {
         services.AddHealthChecks();
         services.AddSingleton<SomeDependency>();
-        services.AddSingleton<SomeHealthCheck>();
+        services.AddSingleton<IHealthCheck, SomeHealthCheck>();
     }
 
     public void Configure(IApplicationBuilder app)
